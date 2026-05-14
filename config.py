@@ -23,7 +23,7 @@ REQUEST_DELAY_SEC = 1.5 # задержка между запросами (rate l
 # Препроцессинг
 TFIDF_MAX_FEATURES = 5000
 TFIDF_NGRAM_RANGE = (1, 2)
-TFIDF_MIN_MIN_DF = 2
+TFIDF_MIN_DF = 2
 
 # Авто-разметка
 LABEL_KEYWORDS = {

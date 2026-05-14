@@ -28,7 +28,7 @@ logger = logging.getLogger("main")
 from config import PROCESSED_DIR, RESULTS_DIR, KMEANS_K_DEFAULT
 from collect.arxiv_client2 import get_data
 
-from preprocess.cleaner        import load_and_clean_all, save_cleaned
+from preprocess.cleaner        import load_and_clear_all, save_cleaned
 from preprocess.labeler        import label_articles, filter_rare_labels, save_labeled
 from preprocess.vectorizer     import fit_transform, save_artifacts, load_artifacts
 
@@ -53,9 +53,20 @@ def step_collect():
 
 def step_preprocess() -> list[dict]:
     logger.info("=" * 60)
-    logger.info("Step 2: Preprocessing data")
+    logger.info("ШАГ 2: ПРЕПРОЦЕССИНГ")
     logger.info("=" * 60)
 
     t0 = time.time()
 
     articles = load_and_clear_all()
+    save_cleaned(articles)
+
+    articles = label_articles(articles)
+    articles = filter_rare_labels(articles)
+    save_labeled(articles)
+
+    X, labels, vectorizer, feature_names = fit_transform(articles)
+    save_artifacts(X, labels, vectorizer)
+
+    logger.info(f"Препроцессинг завершён за {time.time() - t0:.1f}с")
+    return articles
