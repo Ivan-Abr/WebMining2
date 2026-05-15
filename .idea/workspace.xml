@@ -50,6 +50,11 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ivabr\PycharmProjects\PythonProject1\cluster" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.visualizer">
     <configuration name="gradient_boosting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />

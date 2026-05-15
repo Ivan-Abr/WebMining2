@@ -13,6 +13,8 @@ import time
 
 from tqdm import tqdm
 
+from cluster import elbow_method
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -35,6 +37,9 @@ from preprocess.vectorizer     import fit_transform, save_artifacts, load_artifa
 from classify.gradient_boosting import train_gradient_boosting
 from classify.naive_bayes import train_naive_bayes
 from classify.evaluator import compare_models
+
+from cluster.kmeans import *
+from cluster.visualizer import *
 
 def step_collect():
     logger.info("=" * 60)
@@ -108,4 +113,38 @@ def step_classify() -> list[dict]:
 
     logger.info(f"Классификация завершена за {time.time() - t0:.1f}с")
     return [metrics_gb, metrics_nb]
+
+def step_cluster():
+    logger.info("=" * 60)
+    logger.info("ШАГ 4: КЛАСТЕРИЗАЦИЯ")
+    logger.info("=" * 60)
+
+    t0 = time.time()
+
+    X, labels, vectorizer, feature_names = load_artifacts()
+
+    labeled_path = os.path.join(PROCESSED_DIR, "articles_labeled.json")
+    with open(labeled_path, encoding="utf-8") as f:
+        articles = json.load(f)
+
+    optimal_k = elbow_method(X)
+    logger.info(f"Оптимальное k = {optimal_k}")
+
+    cluster_labels, km = run_kmeans(X, k=optimal_k)
+
+    top_words = get_top_words_per_cluster(km, feature_names)
+    save_top_words(top_words)
+
+    articles = add_clusters_to_articles(articles, cluster_labels)
+    with open(labeled_path, "w", encoding="utf-8") as f:
+        json.dump(articles, f, ensure_ascii=False, indent=2)
+
+    logger.info("Построение t-SNE визуализации...")
+    titles = [art.get("title", "") for art in articles]
+    X_2d = reduce_dimensions(X)
+    plot_static(X_2d, cluster_labels, titles, optimal_k)
+    plot_interactive(X_2d, cluster_labels, titles, labels, optimal_k)
+
+    logger.info(f"Кластеризация завершена за {time.time() - t0:.1f}с")
+    return top_words
 
