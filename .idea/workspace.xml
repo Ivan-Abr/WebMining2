@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="naive_bayes">
-      <change afterPath="$PROJECT_DIR$/cluster/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cluster/kmeans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cluster/visualizer.py" afterDir="false" />
+    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="kmeans clusterization (main)">
+      <change afterPath="$PROJECT_DIR$/report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classify/gradient_boosting.py" beforeDir="false" afterPath="$PROJECT_DIR$/classify/gradient_boosting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/arxiv_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/arxiv_client2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,7 @@
     "Python.labeler.executor": "Run",
     "Python.main.executor": "Run",
     "Python.naive_bayes.executor": "Run",
+    "Python.report.executor": "Run",
     "Python.semantic_scholar.executor": "Run",
     "Python.vectorizer.executor": "Run",
     "Python.visualizer.executor": "Run",
@@ -55,7 +58,7 @@
       <recent name="C:\Users\ivabr\PycharmProjects\PythonProject1\cluster" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.visualizer">
+  <component name="RunManager" selected="Python.report">
     <configuration name="gradient_boosting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />
       <option name="ENV_FILES" value="" />
@@ -102,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="naive_bayes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,12 +114,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classify" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classify/naive_bayes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vectorizer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="report" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,12 +137,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/preprocess" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/report" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess/vectorizer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/report/report.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.report" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.gradient_boosting" />
         <item itemvalue="Python.visualizer" />
         <item itemvalue="Python.kmeans" />
-        <item itemvalue="Python.naive_bayes" />
-        <item itemvalue="Python.gradient_boosting" />
-        <item itemvalue="Python.vectorizer" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778839482940</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="kmeans clusterization">
+      <option name="closed" value="true" />
+      <created>1778840705634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778840705634</updated>
+    </task>
+    <task id="LOCAL-00008" summary="kmeans clusterization (main)">
+      <option name="closed" value="true" />
+      <created>1778840953217</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778840953217</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -254,6 +273,8 @@
     <MESSAGE value="vectorizer" />
     <MESSAGE value="gradient_boosting + evaluator" />
     <MESSAGE value="naive_bayes" />
-    <option name="LAST_COMMIT_MESSAGE" value="naive_bayes" />
+    <MESSAGE value="kmeans clusterization" />
+    <MESSAGE value="kmeans clusterization (main)" />
+    <option name="LAST_COMMIT_MESSAGE" value="kmeans clusterization (main)" />
   </component>
 </project>

@@ -54,7 +54,8 @@ def parse_arxiv_page(html):
         abstract = abstract_tag.get_text(strip=True) if abstract_tag else "N/A"
 
         authors_tag = item.find("p", class_="authors")
-        authors = authors_tag.get_text(strip=True).replace("Authors:", "").strip() if authors_tag else "N/A"
+        authors_raw = authors_tag.get_text(strip=True).replace("Authors:", "").strip() if authors_tag else "N/A"
+        authors =  [a.strip() for a in authors_raw.split(",") if a.strip()]
 
         link_tag = item.find("p", class_="list-title")
         link = ""

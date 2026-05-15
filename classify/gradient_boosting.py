@@ -82,7 +82,7 @@ def predict_gradient_boosting(X) -> list[str]:
     X_in = X.toarray() if scipy.sparse.issparse(X) else X
     return le.inverse_transform(clf.predict(X_in)).tolist()
 
-if __name__ == "__main__":
+def run_gradient():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
     from preprocess.vectorizer import load_artifacts
@@ -93,3 +93,6 @@ if __name__ == "__main__":
     print(f"  Accuracy    : {metrics['accuracy']}")
     print(f"  Macro F1    : {metrics['macro_f1']}")
     print(f"  Weighted F1 : {metrics['weighted_f1']}")
+
+if __name__ == "__main__":
+    run_gradient()
