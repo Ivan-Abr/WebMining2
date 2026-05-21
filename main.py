@@ -20,9 +20,8 @@ logger = logging.getLogger("main")
 
 from config import PROCESSED_DIR, RESULTS_DIR, KMEANS_K_DEFAULT
 
-from collect.arxiv_client      import fetch_arxiv_articles, save_arxiv
 from collect.semantic_scholar  import fetch_semantic_articles, save_semantic
-from collect.arxiv_client2 import get_data
+from collect.arxiv import fetch_arxiv_articles, save_arxiv
 
 from preprocess.cleaner        import load_and_clear_all, save_cleaned
 from preprocess.labeler        import label_articles, filter_rare_labels, save_labeled
@@ -49,11 +48,15 @@ def step_collect():
 
     t0 = time.time()
 
-    logger.info("Сбор статей с arXiv...")
-    get_data()
+    logger.info("Сбор статей с arXiv")
+    arxiv_articles = fetch_arxiv_articles()
+    save_arxiv(arxiv_articles)
+    logger.info(f"arXiv: собрано {len(arxiv_articles)} статей")
 
-    logger.info(f"Сбор завершён за {time.time() - t0:.1f}с.")
-
+    logger.info("Сбор статей с semantic_scholar")
+    ss_articles = fetch_semantic_articles()
+    save_semantic(ss_articles)
+    logger.info(f"Semantic Scholar: собрано {len(ss_articles)} статей")
 
 def step_preprocess() -> list[dict]:
     logger.info("=" * 60)

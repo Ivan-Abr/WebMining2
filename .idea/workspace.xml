@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="kmeans clusterization (main)">
-      <change afterPath="$PROJECT_DIR$/report/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/report.py" afterDir="false" />
+    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="правки">
+      <change afterPath="$PROJECT_DIR$/collect/arxiv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processed/articles_cleaned.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processed/articles_labeled.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processed/labels.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/raw/arxiv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/raw/semantic_scholar.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/articles_final.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/cluster_top_words.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/clusters_tsne.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/clusters_tsne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/elbow_curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/gb_classifier.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/label_encoder.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/models_comparison.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results/nb_classifier.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classify/gradient_boosting.py" beforeDir="false" afterPath="$PROJECT_DIR$/classify/gradient_boosting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect/arxiv_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/arxiv_client2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/arxiv_client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/arxiv_client2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +42,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ivan-Abr&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ivan-Abr/WebMining2.git&quot;,
+    &quot;accountId&quot;: &quot;895345aa-9d90-428a-ad34-f5db7524c1b6&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -32,33 +62,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.__init__.executor": "Run",
-    "Python.arxiv_client.executor": "Run",
-    "Python.arxiv_client2.executor": "Run",
-    "Python.cleaner.executor": "Run",
-    "Python.gradient_boosting.executor": "Run",
-    "Python.kmeans.executor": "Run",
-    "Python.labeler.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.naive_bayes.executor": "Run",
-    "Python.report.executor": "Run",
-    "Python.semantic_scholar.executor": "Run",
-    "Python.vectorizer.executor": "Run",
-    "Python.visualizer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.arxiv_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.arxiv_client2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cleaner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gradient_boosting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeans.executor&quot;: &quot;Run&quot;,
+    &quot;Python.labeler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.naive_bayes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.report.executor&quot;: &quot;Run&quot;,
+    &quot;Python.semantic_scholar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vectorizer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualizer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ivabr\PycharmProjects\PythonProject1\cluster" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.report">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="arxiv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/collect" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="C:\Users\ivabr\PycharmProjects\PythonProject1\collect\arxiv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="gradient_boosting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />
       <option name="ENV_FILES" value="" />
@@ -74,29 +127,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classify/gradient_boosting.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="kmeans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cluster" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cluster/kmeans.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.report" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.arxiv_client2" />
+        <item itemvalue="Python.report" />
         <item itemvalue="Python.gradient_boosting" />
         <item itemvalue="Python.visualizer" />
-        <item itemvalue="Python.kmeans" />
       </list>
     </recent_temporary>
   </component>
@@ -263,8 +293,27 @@
       <option name="project" value="LOCAL" />
       <updated>1778840953217</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="правки">
+      <option name="closed" value="true" />
+      <created>1778850132852</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778850132852</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Crawler + init" />
@@ -275,6 +324,7 @@
     <MESSAGE value="naive_bayes" />
     <MESSAGE value="kmeans clusterization" />
     <MESSAGE value="kmeans clusterization (main)" />
-    <option name="LAST_COMMIT_MESSAGE" value="kmeans clusterization (main)" />
+    <MESSAGE value="правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки" />
   </component>
 </project>
