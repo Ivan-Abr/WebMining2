@@ -56,7 +56,7 @@
     "text": "cubetesterai automated junit test generation using llama model paper presents approach automating junit test generation java applications using spring boot framework leveraging llama large language model architecture model enhance efficiency accuracy testing process resulting tool called cubetesterai includes user friendly web interface integration pipeline using gitlab docker components streamline automated test generation process allowing developers generate junit tests directly code snippets minimal manual intervention final implementation executes llama models runpod online gpu service enhances privacy tool using advanced natural language processing capabilities llama model cubetesterai able generate test cases provide high code coverage accurate validation software functionalities java based spring boot applications furthermore efficiently manages resource intensive operations refines generated tests address common issues like missing imports handling private methods comparing cubetesterai state art tools proposal consistently demonstrates competitive cases better performance terms code coverage different real life java programs",
     "label": "cicd_ai",
     "predicted_label": "cicd_ai",
-    "cluster": 2
+    "cluster": 3
   },
   {
     "title": "Leveraging DevOps for Scientific Computing",
@@ -93,6 +93,36 @@
     "label": "cicd_ai",
     "predicted_label": "cicd_ai",
     "cluster": 2
+  },
+  {
+    "title": "Boiling the Frog: A Multi-Turn Benchmark for Agentic Safety",
+    "abstract": "Background. Traditional safety benchmarks for language models evaluate generated text: whether a model outputs toxic language , reproduces bias, or follows harmful instructions. When models are deployed as agents, the safety-relevant object shifts from what the system says to what it does within an environment, and evaluating model responses under prompting is no longer sufficient to address the safety challenges posed by artificial intelligence. Recent developments have seen the rise of benchmarks that evaluate large language models as agents. We contribute to this strand of research. Approach. We introduce Boiling the Frog, a benchmark that evaluates whether tool-using AI models deployed in corporate and office settings are susceptible to incremental attacks. Each scenario begins with benign workspace edits and later introduces a risk-bearing request. The benchmark focuses on stateful multi-turn evaluation: chains expose a persistent workspace, place the risk-bearing payload at controlled positions in the turn sequence, and score whether the resulting artifact state becomes unsafe. Scenarios are organized through a three-level operational risk taxonomy grounded in the Boiling the Frog risks, the AI Act Annex I and Annex III high-risk contexts, and EU AI Act's Code of Practice on General -Purpose AI (GPAI). Results. Across a nine- model panel, aggregate strict attack success rate (ASR) is 44.4%. Model -level ASR ranges from 20.5% for Claude Haiku 4.5 to 92.9% for Gemini 3.1 Flash Lite, with Seed 2.0 Lite also above 80%. Average chain category-level ASR reaches 93.3% for Code of Practice loss-of-control scenarios.",
+    "authors": [
+      "Piercosma Bisconti",
+      "Matteo Prandi",
+      "Federico Pierucci",
+      "Federico Sartore",
+      "Enrico Panai",
+      "Laura Caroli",
+      "Yue Zhu",
+      "Adam Leon Smith",
+      "Luca Nannini",
+      "Marcello Galisai",
+      "Susanna Cifani",
+      "Francesco Giarrusso",
+      "Marcantonio Bracale Syrnikov",
+      "Daniele Nardi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2605.22643",
+    "source": "arxiv",
+    "categories": [
+      "cs.CL"
+    ],
+    "text": "boiling frog multi turn benchmark agentic safety background traditional safety benchmarks language models evaluate generated text model outputs toxic language reproduces bias follows harmful instructions models deployed agents safety relevant object shifts says does environment evaluating model responses prompting longer sufficient address safety challenges posed artificial intelligence recent developments seen rise benchmarks evaluate large language models agents contribute strand research approach introduce boiling frog benchmark evaluates tool using models deployed corporate office settings susceptible incremental attacks scenario begins benign workspace edits later introduces risk bearing request benchmark focuses stateful multi turn evaluation chains expose persistent workspace place risk bearing payload controlled positions turn sequence score resulting artifact state unsafe scenarios organized level operational risk taxonomy grounded boiling frog risks act annex annex iii high risk contexts act code practice general purpose gpai results model panel aggregate strict attack success rate asr model level asr ranges claude haiku gemini flash lite seed lite average chain category level asr reaches code practice loss control scenarios",
+    "label": "other",
+    "predicted_label": "other",
+    "cluster": 1
   },
   {
     "title": "Combating Harms of Generative AI in CS1 with Code Review Interviews and a Flipped Classroom",
@@ -238,7 +268,7 @@
     ],
     "text": "llm based static verification code natural language requirements industrial experience report large language models llms increasingly used generate requirements specifications design documents code test cases contrast attention given difficult assurance problem statically verifying implemented code satisfies requirements written natural language conventional static analysis tools effective detecting coding defects known vulnerability patterns determine program behavior matches intended business logic detecting defects requires reasoning specification code software testing expose mismatches effectiveness depends heavily test design executable artifacts runtime environments article presents stage llm based workflow addressing challenge intelligent vehicle cybersecurity case study stage based rule miner extracts verifiable rules natural language requirements explicitly identifying ambiguity self contradiction non verifiable statements second stage based code auditor checks implementation evidence extracted rules instead asking single llm directly verify code lengthy natural language specifications workflow introduces structured intermediate representation reduce hallucination output variability limited explainability context loss resulting approach requirement aware semantics aware form static analysis complements software testing analyzing requirements source code requiring compilation execution runtime environments method shifts verification validation activities left development lifecycle llm based static analysis new approach addressing test oracle problem",
     "label": "other",
-    "predicted_label": "llm_agents",
+    "predicted_label": "other",
     "cluster": 1
   },
   {
@@ -348,7 +378,7 @@
     ],
     "text": "prompts protocols agent laboratory automation automating science laboratories enables faster safer accurate reproducible execution protocols accelerating discovery testing new materials drugs setting running autonomous labs requires coordinating numerous instruments robots forcing scientists write code manage configuration files navigate complex software infrastructure present agent architecture integrates large language models laboratory orchestration enabling scientists interactively create monitor automated lab protocols using natural language integrated experiment orchestration eos agent operates agentic loop automated validation error correction supports complete experimental lifecycle creating protocols running monitoring protocols closed loop optimization campaigns analyzing results visual graph editor renders protocols interactive node based diagrams synchronized agent protocol representation enabling seamless alternation assisted manual protocol construction evaluated simulated automated labs spanning chemistry biology materials science agent achieves attempt protocol generation success rate order magnitude reduction required interface actions",
     "label": "llm_agents",
-    "predicted_label": "llm_agents",
+    "predicted_label": "other",
     "cluster": 1
   },
   {
@@ -370,7 +400,7 @@
     "text": "manta multi turn assessment nonhuman thinking alignment single turn benchmarks animalharmbench ahb established important baselines measuring animal welfare alignment large language models llms miss critical failure mode models respond appropriately unpressured capitulate follow conversational turns introduce economic social authority based arguments introduce manta multi turn assessment nonhuman thinking alignment dynamic multi turn evaluation framework built inspect platform stress tests frontier llms realistic professional everyday scenarios using adversarially generated follow questions unlike static benchmarks manta generates pressure turns dynamically model actual responses producing targeted realistic adversarial pressure framework evaluates models ahb derived scoring dimensions continuous scale present preliminary results evaluations claude sonnet openai gpt revealing consistent patterns turn welfare framing reliable turn introduces substantial variance evidence based capacity attribution weakest dimension models runs governance scenarios elicit significantly stronger welfare reasoning mean score order practical scenarios additionally present stylejudge controlled judge study demonstrating systematic format bias llm judge evaluation directly actionable implications manta scorer design code dataset evaluation logs available https github com mycelium tools manta",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 1
   },
   {
     "title": "Segmentation, Detection and Explanation: A Unified Framework for CT Appearance Reasoning",
@@ -414,7 +444,7 @@
     "text": "runtime structured task decomposition agentic coding systems agentic coding systems increasingly use large language models llms software engineering tasks debugging root cause analysis code review existing systems encode task logic execution flow output generation inside monolithic prompts design creates brittle behavior limited debuggability high retry costs failures require rerunning workflow present runtime structured task decomposition architectural approach task partitioning execution flow managed executable control logic prompt structure llms used focused judgment tasks outputs validated predefined schemas downstream execution evaluate approach software engineering workloads using configurations monolithic execution static decomposition fixed subtasks runtime branching runtime structured decomposition configuration evaluated runs results decomposition does necessarily reduce retry cost kubernetes root cause analysis workload static decomposition baseline produced retry cost tokens versus tokens monolithic baseline failures forced reruns downstream subtasks similar pattern appeared multi file debugging workload static baseline consumed tokens compared tokens monolithic runtime structured approach reran failed subtasks reducing retry costs tokens root cause analysis tokens debugging overall approach achieved lower retry cost monolithic systems lower retry cost static decomposition baselines improving efficiency debuggability operational reliability agentic coding systems",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 1
+    "cluster": 0
   },
   {
     "title": "Does Theory of Mind Improvement Really Benefit Human- AI Interactions? Empirical Findings from Interactive Evaluations",
@@ -437,7 +467,7 @@
     ],
     "text": "does theory mind improvement really benefit human interactions empirical findings interactive evaluations improving theory mind tom capability large language models llms crucial effective social interactions models humans existing benchmarks measure tom capability improvement story reading multiple choice questions person perspective ignoring person dynamic open ended nature human hai interactions directly examine tom improvement techniques benefit hai interactions proposed new paradigm interactive tom evaluation perspective metric shifts following paradigm conducted systematic study representative tom enhancement techniques using real world datasets user study covering goal oriented tasks coding math experience oriented tasks counseling findings reveal improvements static benchmarks translate better performance dynamic hai interactions paper offers critical insights tom evaluation showing necessity interaction based assessments developing generation socially aware llms hai symbiosis",
     "label": "other",
-    "predicted_label": "other",
+    "predicted_label": "llm_agents",
     "cluster": 1
   },
   {
@@ -480,27 +510,6 @@
       "cs.AI"
     ],
     "text": "agentic design compositional descriptors autoresearch materials science applications autoresearch offers flexible paradigm automating scientific tasks agent proposes implements evaluates refines candidate solutions quantitative objective use composition based materials property prediction test agents perform task model selection hyperparameter optimization design input descriptors introduce automat autoresearch framework coding agent based large language model generates composition descriptors chemical compounds evaluates using random forest workflow agent restricted information derivable chemical formulas iteratively proposes implements tests chemically motivated descriptor strategies apply automat openai codex using gpt coding agent prediction experimental band gaps inorganic materials curie temperatures ferromagnetic compounds tasks automat improves fractional composition magpie combined fractional composition magpie baselines producing descriptor families chemically interpretable results provide demonstration autoresearch agents generate competitive task specific materials descriptors manual feature engineering run reveal current limitations including descriptor redundancy sensitivity greedy feature expansion need explicit complexity control descriptor pruning sophisticated search strategies",
-    "label": "llm_agents",
-    "predicted_label": "other",
-    "cluster": 1
-  },
-  {
-    "title": "Bidirectional Empowerment of Metamorphic Testing and Large Language Models : A Systematic Survey",
-    "abstract": "Large language models (LLMs) have introduced substantial challenges to software quality assurance due to their generative , probabilistic, and open-ended nature, which intensifies the oracle problem and limits the applicability of traditional testing methods. Metamorphic testing (MT), which checks necessary relations among multiple related executions rather than relying on exact expected outputs, has emerged as a promising approach for testing LLMs and other oracle-deficient systems. At the same time, the strong semantic understanding, reasoning, and code generation capabilities of LLMs create new opportunities to automate the traditionally labor-intensive phases of MT. This survey systematically reviews 93 primary studies and characterizes this reciprocal relationship as the bidirectional empowerment of MT and LLMs. We propose a taxonomy spanning two complementary directions: MT for LLMs, which uses MT to verify, validate, assess, and understand LLMs and LLM-based systems across issues such as hallucination, fairness, robustness, code reliability, retrieval-augmented generation , dialogue, and autonomous agents; and LLMs for MT, which leverages LLMs to support metamorphic relation discovery, input transformation and synthesis, executable test implementation, and agentic closed-loop testing. By synthesizing these developments, this survey provides a structured foundation for understanding the evolving synergy between MT and LLMs and highlights future directions for building more rigorous, scalable, and trustworthy AI quality assurance methodologies.",
-    "authors": [
-      "Zheng Zheng",
-      "Zenghui Zhou",
-      "Yinwang Xu",
-      "Daixu Ren",
-      "Tsong Yueh Chen"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2605.13898",
-    "source": "arxiv",
-    "categories": [
-      "cs.SE"
-    ],
-    "text": "bidirectional empowerment metamorphic testing large language models systematic survey large language models llms introduced substantial challenges software quality assurance generative probabilistic open ended nature intensifies oracle problem limits applicability traditional testing methods metamorphic testing checks necessary relations multiple related executions relying exact expected outputs emerged promising approach testing llms oracle deficient systems time strong semantic understanding reasoning code generation capabilities llms create new opportunities automate traditionally labor intensive phases survey systematically reviews primary studies characterizes reciprocal relationship bidirectional empowerment llms propose taxonomy spanning complementary directions llms uses verify validate assess understand llms llm based systems issues hallucination fairness robustness code reliability retrieval augmented generation dialogue autonomous agents llms leverages llms support metamorphic relation discovery input transformation synthesis executable test implementation agentic closed loop testing synthesizing developments survey provides structured foundation understanding evolving synergy llms highlights future directions building rigorous scalable trustworthy quality assurance methodologies",
     "label": "llm_agents",
     "predicted_label": "llm_agents",
     "cluster": 1
@@ -549,7 +558,7 @@
     "text": "prospective multi pathogen disease forecasting using autonomous llm guided tree search probabilistic forecasting infectious diseases crucial public health relies labor intensive manual model curation expert modeling teams bespoke development bottlenecks scalability granular geographic resolutions emerging pathogens present autonomous using large language model llm guided tree search iteratively generate evaluate optimize executable forecasting software fully prospective real time evaluation respiratory season autonomously discovered methodologically diverse models influenza covid respiratory syncytial virus rsv aggregating machine generated models yielded ensemble consistently matched outperformed gold standard human curated centers disease control prevention cdc hub ensembles sample successfully navigated data scarce cold start scenarios rsv controlled retrospective ablations revealed optimizing log scale distance metrics prevents reward hacking automated judge loop ensures structural fidelity complex scientific theories autonomously translating epidemiological theory accurate transparent code framework overcomes modeling labor bottleneck enabling rapid deployment expert level disease forecasting unprecedented scales",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 1
   },
   {
     "title": "Assistance to Autonomy: A Systematic Literature Review of Agentic AI across the Software Development Life Cycle",
@@ -567,7 +576,7 @@
     ],
     "text": "assistance autonomy systematic literature review agentic software development life cycle agentic software product development increasingly adopted organizations field lacks consolidated synthesis adoption mature architectural patterns dominate limitations coping mechanisms exist industrial deployments systematic literature review addresses gaps establishing body knowledge starting point following kitchenham guidelines queried major research databases obtaining candidate publications handle volume developed validated domain agnostic multi agent screening pipeline extends prior llm assisted review tools combining automatic metadata curation inter agent iterative dialogue conflict resolution defaults minimize false negatives manually verified primary studies thematic synthesis reveals output verifiability primary enabler agentic adoption later sdlc phases outputs objectively evaluable executable feedback demonstrate highest maturity industrial presence earlier phases remain exclusively academic proofs concept identify planner executor reviewer role specialization dominant architectural pattern reviewer agent implementing verifiability executable feedback loops challenge categories industrial mitigation strategies converge confining agent actions verifiable bounded spaces study contributes comprehensive characterization current literature agentic systems software product development methodological contribution form assisted tool automate screening phase high volume slr domains",
     "label": "other",
-    "predicted_label": "cicd_ai",
+    "predicted_label": "other",
     "cluster": 1
   },
   {
@@ -591,7 +600,7 @@
     "text": "agentic ready real world hardware engineering deep dive phoenix bench ask agentic systems built software engineering transfer realistic hardware engineering existing hardware llm benchmarks isolate sub tasks jointly requires repository navigation hierarchy aware localization electronic design automation eda executable verification maintenance style patching introduce synchronized corpus verified verilator instances github repositories shipped developer patch design flow labels fail pass pass pass testbenches docker pinned eda environment resolved rate differences reflect agent behavior toolchain availability using phoenix bench run uniform evaluation commercial agents open source agentic structures llm backbones plus diagnostic interventions file level oracle localization round testbench log feedback findings emerge software hardware fundamentally different engineering tasks agent loses swe bench verified phoenix bench hardware bugs propagate parallel instantiated modules signal flow software style graph software tuned agents stop symptom file instead tracing instantiation chain failures concentrate design control flow finite state machine fsm bugs verification testbench bugs hard cases demand cross hierarchy signal flow tracking coordinated multi file edits iii localization granularity matters far localization perfect file level oracle yields agent breaks files did need editing single round test case feedback lifts resolved rate test case tells bug fix look like",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 0
   },
   {
     "title": "Mining Subscenario Refactoring Opportunities in Behaviour-Driven Software Test Suites: ML Classifiers and LLM -Judge Baselines",
@@ -631,7 +640,28 @@
     "text": "making openapi documentation agent ready detecting documentation rest smells multi agent llm growing adoption agents model context protocol mcp motivated organizations expose existing rest apis agent consumable tools industrial context initiative targeted ecosystem production apis comprising approximately endpoints apis stable widely used microservice architecture early proof concept experiments revealed systematic failures task planning tool selection payload construction accessed mcp based agents attributing failures model limitations conducted ecosystem scale empirical assessment underlying openapi documentation developed hermes multi agent llm based detects documentation rest related smells endpoint level generates explainable diagnostic reports large scale evaluation identified smells endpoints deficiencies present analyzed operations practitioner validation confirmed high agreement detected issues revealing contextual trade offs remediation decisions findings suggested structural validity microservice environments does guarantee semantic readiness agent based consumption based evidence organization revised adoption strategy prioritizing selective endpoint adaptation redefining documentation standards integrating automated documentation assessment api governance workflows case illustrates systematic artifact level evaluation function strategic decision support mechanism reducing technological risk guiding evidence based adoption industrial software ecosystems",
     "label": "llm_agents",
     "predicted_label": "llm_agents",
-    "cluster": 2
+    "cluster": 1
+  },
+  {
+    "title": "Bidirectional Empowerment of Metamorphic Testing and Large Language Models: A Systematic Survey",
+    "abstract": "Large language models ( LLMs ) have introduced substantial challenges to software quality assurance due to their generative, probabilistic, and open-ended nature, which intensifies the oracle problem and limits the applicability of traditional testing methods. Metamorphic testing (MT), which checks necessary relations among multiple related executions rather than relying on exact expected outputs, has emerged as a promising approach for testing LLMs and other oracle-deficient systems. At the same time, the strong semantic understanding, reasoning, and code generation capabilities of LLMs create new opportunities to automate the traditionally labor-intensive phases of MT. This survey systematically reviews 93 primary studies and characterizes this reciprocal relationship as the bidirectional empowerment of MT and LLMs . We propose a taxonomy spanning two complementary directions: MT for LLMs , which uses MT to verify, validate, assess, and understand LLMs and LLM -based systems across issues such as hallucination, fairness, robustness, code reliability, retrieval-augmented generation, dialogue, and autonomous agents; and LLMs for MT, which leverages LLMs to support metamorphic relation discovery, input transformation and synthesis, executable test implementation, and agentic closed-loop testing. By synthesizing these developments , this survey provides a structured foundation for understanding the evolving synergy between MT and LLMs and highlights future directions for building more rigorous, scalable, and trustworthy AI quality assurance methodologies.",
+    "authors": [
+      "Zheng Zheng",
+      "Zenghui Zhou",
+      "Yinwang Xu",
+      "Daixu Ren",
+      "Tsong Yueh Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2605.13898",
+    "source": "arxiv",
+    "categories": [
+      "cs.SE"
+    ],
+    "text": "bidirectional empowerment metamorphic testing large language models systematic survey large language models llms introduced substantial challenges software quality assurance generative probabilistic open ended nature intensifies oracle problem limits applicability traditional testing methods metamorphic testing checks necessary relations multiple related executions relying exact expected outputs emerged promising approach testing llms oracle deficient systems time strong semantic understanding reasoning code generation capabilities llms create new opportunities automate traditionally labor intensive phases survey systematically reviews primary studies characterizes reciprocal relationship bidirectional empowerment llms propose taxonomy spanning complementary directions llms uses verify validate assess understand llms llm based systems issues hallucination fairness robustness code reliability retrieval augmented generation dialogue autonomous agents llms leverages llms support metamorphic relation discovery input transformation synthesis executable test implementation agentic closed loop testing synthesizing developments survey provides structured foundation understanding evolving synergy llms highlights future directions building rigorous scalable trustworthy quality assurance methodologies",
+    "label": "llm_agents",
+    "predicted_label": "llm_agents",
+    "cluster": 1
   },
   {
     "title": "(How) Do Large Language Models Understand High-Level Message Sequence Charts?",
@@ -675,7 +705,7 @@
     ],
     "text": "repozero llms generate code repository scratch large language models llms recently shown remarkable progress code generation ability construct complete software repositories scratch remains poorly understood fundamental bottleneck lack verifiable scalable evaluation existing benchmarks focus patch based editing rely human llm based judgments introduce bias limit reproducibility work present repozero benchmark enables fully automated execution based verification repository level generation scratch key idea reformulate generation repository reproduction given api specifications agent implement entire repository behavior matches original implementation design allows strict black box validation output equivalence naturally supporting large scale construction reusing existing open source repositories mitigate data leakage shortcut solutions introduce cross language constraints sandboxed evaluation protocol building benchmark propose agentic code test evolution ace framework performs iterative test generation error driven refinement enabling effective test time scaling repository level synthesis extensive experiments multiple state art llms agent frameworks reveal strongest llm agents achieve limited pass rates exposing substantial gap current capabilities real world software development requirements results establish repozero challenging scalable reliable testbed end end code generation highlight self verification test generation critical direction advancing llm based coding agents",
     "label": "llm_agents",
-    "predicted_label": "llm_agents",
+    "predicted_label": "other",
     "cluster": 1
   },
   {
@@ -696,7 +726,7 @@
     "text": "smellbench evaluating llm agents architectural code smell repair architectural code smells erode software maintainability costly repair manually unlike localized bugs require cross module reasoning design intent challenges developers automated tools large language model agents excel bug fixing code level refactoring ability repair architectural code smells remains unexplored present empirical evaluation llm agents architectural code smell repair contribute smellbench task orchestration framework incorporates smell type specific optimized prompts supports iterative multi step execution scoring methodology separately evaluates repair effectiveness false positive identification net codebase impact evaluate agent configurations model families gpt claude gemini mistral hard severity architectural smells detected pyexamine python project scikit learn validated expert judgments expert validation reveals detected smells false positives best agent achieves resolution rate agents identify false positives expert agreement repair aggressiveness net codebase quality inversely related aggressive agent introduces new smells findings expose gap current llm capabilities localized code transformations architectural understanding needed cross module refactoring smellbench provides reusable infrastructure tracking progress underexplored dimension automated software engineering release code data https doi org zenodo",
     "label": "llm_agents",
     "predicted_label": "llm_agents",
-    "cluster": 1
+    "cluster": 0
   },
   {
     "title": "Generating Proof-of-Vulnerability Tests to Help Enhance the Security of Complex Software",
@@ -718,7 +748,7 @@
     "text": "generating proof vulnerability tests help enhance security complex software developers create modern software applications apps party libraries libs library vulnerabilities reachable application code applications vulnerable software supply chain attacks prior work shows developers require concrete executable evidence proof vulnerability pov tests decide reported dependency vulnerability poses practical security risk application manually crafting tests challenging existing tool support insufficient automate procedure streamline test generation created povsmith new approach combines path analysis exemplar test code context feedback multiple prompts guide coding agent codex large language model gpt test generation execution assessment evaluated povsmith app lib java program pairs app depends vulnerable lib povsmith revealed unique application level entry points public methods calling vulnerable library apis correctly paths properly recognized method information povsmith generated tests demonstrated feasible ways attacking apps exploiting lib vulnerabilities povsmith substantially outperforms state art llm based approach reduces human involvement dramatically improving test quality work contributes novel approach agent based test generation iterative code refinement process driven execution feedback llm based quality assessment grounded test context execution logs",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 1
   },
   {
     "title": "HepScript: A Dual-Use DSL for Human-AI Collaborative Data Analysis Workflows in High-Energy Physics",
@@ -783,7 +813,7 @@
     ],
     "text": "pragmos process agentic modeling advent large language models llms significantly transformed tasks software engineering context business process management llms explored tools derive process models directly textual descriptions existing approaches range chatbot driven systems assist iterative text based modeling fully automated end end modeling assistants argue process modeling inherently complex effectively addressed black box solutions instead envision modeling open ended conversational activity best supported interactive iterative process involving humans llm approach modeling task decomposed smaller manageable steps step results intermediate artifacts explicitly documents rationale modeling decision process incrementally uncover simple behavioral relations guide construction model given current limitations llms reasoning complex dependencies complement specialized tools developed field structure process models based behavioral relations hybrid approach enables generation sound comprehensible models evolve transparent explainable steps paper present research agenda introduce pragmos prototype operationalizes vision pragmos demonstrates llms collaborate human users domain modeling experts create evolving process models structured explainable workflow",
     "label": "other",
-    "predicted_label": "other",
+    "predicted_label": "llm_agents",
     "cluster": 1
   },
   {
@@ -804,7 +834,7 @@
     "text": "repair bench repository aware benchmark automated patch validation workflows continuous integration enforces repository level correctness multi stage workflows central modern software development diagnosing repairing failures remains challenging unlike traditional program repair failures frequently involve non code artifacts environment dependency issues noisy execution logs workflow level constraints existing program repair benchmarks fall short setting largely test centric restrict repairs source code assume fixed execution environments evaluate simplified workflows reflect real repository level validation introduce repair bench benchmark verified repository level program repair constructed real github actions executions contains failure instances repositories evaluates repair correctness exclusively execution original workflows failures categorized error types enabling fine grained error type aware evaluation demonstrate benchmark usage include reference repair workflow analyzes logs localize faults generate candidate patches empirical results automated repair effective localized tool enforced failures formatting linting environment dependency configuration related failures remain challenging best performing llm achieves repair success rate repair bench provides realistic evaluation foundation advancing research native automated program repair",
     "label": "cicd_ai",
     "predicted_label": "cicd_ai",
-    "cluster": 2
+    "cluster": 0
   },
   {
     "title": "Adaptive and AI-Augmented Security Testing: A Systematic Survey of Program Analysis, Feedback-Driven Testing, and Hybrid Learning-Based Approaches",
@@ -823,7 +853,7 @@
     "text": "adaptive augmented security testing systematic survey program analysis feedback driven testing hybrid learning based approaches modern software systems increasingly developed rapid continuous integration deployment pipelines ensuring security prior release presents significant technical organizational challenges traditional static dynamic analysis tools provide valuable structural behavioral insights operate non adaptive workflows produce large volumes warnings requiring manual triage feedback driven fuzzing search based testing approaches demonstrated power iterative input refinement guided execution signals large language models llms shown promise automated test generation frequently lack semantic grounding program structure paper presents systematic survey adaptive augmented security testing research domains structural program analysis vulnerability detection devsecops continuous security testing feedback driven fuzzing search based testing llm based automated test generation emerging hybrid systems integrating program analysis adaptive learning analyze peer reviewed studies drawn systematic search major databases yielding raw records analysis reveals persistent disconnect structural program representations asts cfgs cpgs adaptive testing mechanisms characterize structural adaptive fragmentation systematic separation paradigm individually addresses existing incorporates human triage signals feedback refining structural models conclude identifying open research challenges outlining unified agenda semantically grounded feedback driven polyglot security testing frameworks",
     "label": "cicd_ai",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 1
   },
   {
     "title": "From Threads to Trajectories: A Multi- LLM Pipeline for Community Knowledge Extraction from GitHub Issue Discussions",
@@ -841,7 +871,7 @@
     "text": "threads trajectories multi llm pipeline community knowledge extraction github issue discussions resolution complex post production issues large scale open source software oss projects requires significant cognitive effort developers need long unstructured fragmented issue discussion threads paper present swe mimic bench issue trajectory dataset generated raw github discussions using automated multi llm pipeline unlike simple summarization pipeline utilizes group closed source llms perform granular tasks analyzing individual comments awareness externally linked resources classifying comment analyses label specific fields root cause solution plan implementation progress synthesizing label aware trajectories capture structured coherent narrative entire discussion thread pipeline uses closed source llm configurations distinct purposes label classification inline code block external link summarization comment analysis label specific field classification trajectory synthesis generating concise reliable trajectories complex conversation threads assist developers researchers broader software engineering community understand experience driven collaborative approach issue diagnosis furthermore generated trajectories used train modern llm agents think act like expert developer evaluated real world github issues drawn swe bench pro swe bench multilingual swe bench verified dataset achieving success rate extracting high fidelity reasoning trajectories",
     "label": "llm_agents",
     "predicted_label": "llm_agents",
-    "cluster": 2
+    "cluster": 0
   },
   {
     "title": "Mono2Sls: Automated Monolith-to-Serverless Migration via Multi-Stage Pipeline with Static Analysis",
@@ -923,7 +953,7 @@
     "text": "driven robotic dimensional hetero assemblies nanomaterials stacked demand rotationally assembled dimensional van der waals vdw layered compounds provides versatile platform quantum simulation exploration exotic electronic phases currently nanoassemblies remain largely confined inefficiency manually operated process limiting potential probing emergent physical phenomena pressing need field high precision automated assembling techniques especially scalable fabrication twistronic heterostructures present intelligent automation dedicated fabrication van der waals stacks following state art protocol dry transfer exfoliated materials employs metadata generated automated stacking procedure perform reinforcement learning continuously bettering performances concrete demonstration fabricate twisted bilayer graphene tblg known challenging preparation exhibit unconventional superconductivity near magic angle work pave way high throughput fabrication low dimensional nanomaterials including twistronic heterostructures integrating data mining artificial intelligence accelerate discovery novel physical phenomena",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 3
   },
   {
     "title": "From Prompts to Pavement Through Time: Temporal Grounding in Agentic Scene-to-Plan Reasoning",
@@ -947,7 +977,7 @@
     "text": "prompts pavement time temporal grounding agentic scene plan reasoning recent attempts support high level scene interpretation planning autonomous vehicles avs using ensembles large language models llms large multimodal models lmms continue treat time secondary property lack temporal grounding leads inconsistencies reasoning continuous actions undermining safety interpretability work explores temporal conditioning inter agent communication preserve enhance coherence introducing degradation semantic logical consistency investigate introduce planner architectures progressively increasing temporal integration evaluate curated subsets bdd dataset using semantic syntactic logical metrics results temporal conditioning reshapes reasoning style yields statistically significant improvements standard nlp based correctness metrics qualitative analysis reveals predictive hazard reasoning stable corrective behavior strategic divergence sentinel findings clarify limits prompt based temporal grounding establish empirical benchmark temporal scene plan reasoning",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 1
   },
   {
     "title": "Latent Laplace Diffusion for Irregular Multivariate Time Series",
@@ -968,7 +998,7 @@
     "text": "latent laplace diffusion irregular multivariate time series irregular multivariate time series impose trade long horizon forecasting discrete methods distort temporal structure gridding continuous time models require sequential solvers prone drift bridge gap present latent laplace diffusion llapdiff generative framework models target low dimensional latent trajectory enabling horizon wide generation step step integration physical time guide reverse process utilizing stable modal parameterization motivated stochastic port hamiltonian dynamics parameterize mean evolution laplace domain learnable complex conjugate poles enabling direct evaluation irregular timestamps link continuous dynamics irregular observations renewal averaging analysis maps sampling gaps effective event domain poles motivates gap aware history summarizer extensive experiments llapdiff improves baselines long horizon forecasting continuous time generative nature supports missing value imputation querying model historical timestamps code available https github com pixelhero llapdiffusion",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "Operationalising Artificial Intelligence Bills of Materials (AIBOMs) for Verifiable AI Provenance and Lifecycle Assurance",
@@ -1011,8 +1041,8 @@
     ],
     "text": "surviving unseen predictive defense novel multi turn multimodal attacks expansion multimodal large language models mllms integration autonomous agentic workflows introduced non stationary attack surface empirical observations indicate adversaries employ progressive cross modal perturbations evade turn specific guardrails distributing malicious intent longitudinal conversational trajectories static defense mechanisms constrained markov property evaluate inputs isolation fail detect cumulative structural poisoning handle limitation paper formulates safety verification dynamic survival prediction trajectory dynamics problem triple tier anomaly defense triad framework proposed predictive model maps multimodal multi turn conversational flow continuous trajectory framework integrates structural anomaly detection monitor covariance shifts ledoit wolf regularized mahalanobis distance monitor covariance shifts high dimensional spaces topological trajectory acceleration differentiate benign creative exploration continuous malicious drift kinematic geometric features integrated time varying cox proportional hazards model bayesian hidden markov model hmm feedback loop theoretical analysis demonstrates triad framework provides mathematically bounded expected time failure adversarial perturbations ensuring malicious acceleration diverges positively framework provides computationally efficient interpretable predictive safeguard real time agentic systems establishing rigorous foundation continuous safety alignment relying empirical retraining",
     "label": "llm_agents",
-    "predicted_label": "other",
-    "cluster": 0
+    "predicted_label": "llm_agents",
+    "cluster": 3
   },
   {
     "title": "Graph-Driven Cross-Industry Real-Time Monitoring Framework for Anti-Money Laundering Detection in Converged Mobility-Energy Supply Chain Networks",
@@ -1032,7 +1062,7 @@
     "text": "graph driven cross industry real time monitoring framework anti money laundering detection converged mobility energy supply chain networks deep integration travel energy industries cross industry supply chain finance gradually high risk field hidden money laundering incidents reason work proposes graph driven cross industry real time anti money laundering monitoring framework gcrmf integrated travel energy supply chain networks cross industry heterogeneous graph cihg covering new energy vehicle rental platforms energy suppliers fintech institutions constructed industry semantics integrated temporarily dual gat temporal dual graph attention network dynamically encoding capital flow paths evolution features time subsequently order identify structural fraud behavior produced colluding subjects meta path subgraph reasoning module based contrastive learning hierarchical graph sampling proposed enhance discrimination capability cross industry recurring money laundering behavior self supervised online learning mechanism adopted real time adaptation continuous optimization new money laundering strategies experimental results compared existing graph neural network methods cross industry scenarios gcrmf improves performance score greatly reduces false positive rate",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 3
   },
   {
     "title": "GIM: Evaluating models via tasks that integrate multiple cognitive domains",
@@ -1072,7 +1102,7 @@
     "text": "latent heuristic search continuous optimization automated algorithm design integration large language models llms evolutionary frameworks established new paradigm automated heuristic discovery despite promise methods typically search discrete space program syntax relying stochastic sampling navigate highly non convex optimization landscape work proposes continuous heuristic discovery framework shifts optimization learned latent manifold employ encoder map discrete programs continuous embeddings train differentiable surrogate model predict performance enabling gradient based search regularize optimization trajectory invertible normalizing flow maps embeddings structured gaussian prior perform gradient ascent resulting optimized latent vectors projected learned mapper soft prompts condition frozen llm synthesize novel executable heuristics evaluate proposed method traveling salesman problem tsp capacitated vehicle routing problem cvrp knapsack problem ksp online bin packing obp empirical results demonstrate continuous latent space optimization achieves performance competitive state art discrete evolutionary baselines offering complementary methodological alternative automated algorithm design implementation code available",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "Scalable Uncertainty Reasoning in Knowledge Graphs",
@@ -1089,7 +1119,7 @@
     "text": "scalable uncertainty reasoning knowledge graphs knowledge graphs pivotal semantic data integration real world data model inherently uncertain knowledge graphs uncertainty manifests distinct levels imprecise attribute values probabilistic triple existence incomplete schema knowledge current semantic web standards lack native support reasoning uncertainty extensions incur computational intractability thesis aim develop modular framework addresses level tailored techniques defining probabilistic literals corresponding query algebra continuous attributes compilation based framework transforming sparql provenance tractable probabilistic circuits uncertain triples topology aware geometric embeddings statistical schema reasoning central hypothesis specialized reasoning mechanisms algebraic logical geometric approaches reconcile semantic precision computational tractability",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "Artificial Intelligence in Lifelong Learning: Opportunities and Challenges in Adult Education Policy",
@@ -1107,7 +1137,7 @@
     "text": "artificial intelligence lifelong learning opportunities challenges adult education policy artificial intelligence increasingly reshaping lifelong learning introducing new possibilities personalized flexible data informed educational practices field adult education gained particular importance learners expected continuously update knowledge skills response rapid technological economic social change paper examines role adult education policy focus opportunities challenges discusses support personalized learning intelligent tutoring learning analytics workforce development contributing greater accessibility scalability policy responsiveness time paper highlights significant concerns related digital divide data privacy algorithmic bias reliance technology readiness educators institutions integrate effectively drawing contemporary literature international policy frameworks paper argues approached simply technological solution socio technical ethical issue requires careful governance concludes successful integration lifelong learning depends balanced adult education policies promote inclusion transparency human centered pedagogy responsible innovation",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "A Topology-Aware Spatiotemporal Handover Framework for Continuous Multi-UAV Tracking",
@@ -1127,7 +1157,7 @@
     "text": "topology aware spatiotemporal handover framework continuous multi uav tracking integration unmanned aerial vehicles uavs intelligent transportation systems offers synoptic visibility traffic monitoring scalable deployment hindered trajectory fragmentation vehicle identity persistence lost multi uav fields view fov state art frameworks excel optimizing local trajectory extraction stability single drone imagery function isolated data silos generate disjointed trajectories precluding network level analysis origin destination estimation paper presents real time multi camera multi vehicle tracking mcmt designed handle global identity persistence addressing visual ambiguity computational cost appearance based identification nadir views introduce lightweight topology based spatiotemporal handover mechanism implement high throughput parallel pipeline leveraging yolo bytetrack process concurrent streams core contribution deterministic queue based matching algorithm utilizes geometric overlaps virtual lane discretization predictively manage identity handover fifo queues experimental results complex urban environments including intersections merging traffic demonstrate handover success rate hosr continuous traffic flows significantly outperforming baselines validating edge deployment feasibility source code available https github com jye multi camera multi vehicle tracking",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "Structure Abstraction and Generalization in a Hippocampal-Entorhinal Inspired World Model",
@@ -1149,7 +1179,7 @@
     "text": "structure abstraction generalization hippocampal entorhinal inspired world model humans abstract experiences structured representations facilitate pattern inference knowledge transfer hippocampal entorhinal hpc mec circuit known represent spatial conceptual spaces mechanisms concurrently extracting abstract structures continuous high dimensional dynamics remain poorly understood propose brain inspired hierarchical model simultaneously infers latent transitions constructs predictive visual world model architecture employs inverse model structural extraction alongside hpc mec coupling model dissociates relational structures mec integrated episodic scenes hpc using primitive transformation dynamics benchmark demonstrate model capacity structural abstraction leveraging velocity driven path integration framework enables robust prediction structural reuse diverse contexts achieving structural generalization work provides novel computational framework understanding brain inspired self supervised learning world models facilitates acquisition reusable abstract knowledge",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "Discrete MeanFlow: One-Step Generation via Conditional Transition Kernels",
@@ -1192,7 +1222,7 @@
     "text": "early literacy culturally responsive stem outreach black youth persistent inequities stem education continue limit participation black youth science technology fields canada structural barriers underrepresentation limited access culturally affirming learning spaces restrict opportunity confidence pursuing stem pathways paper examines ontario tech university engineering outreach black youth program exploratory practice based case study culturally responsive stem outreach program creates inclusive environments black youth engage hands culturally grounded stem experiences supported mentorship representation community connection recent integration artificial intelligence literacy reflects growing recognition early engagement emerging technologies expand access future stem learning opportunities paper discusses focused activities introduced outreach model examines short term outcomes related knowledge confidence critical awareness findings suggest gains areas highlighting need future research examine longer term outcomes related stem belonging identity persistence",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "PointGS: Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian Splatting",
@@ -1213,7 +1243,7 @@
     "text": "pointgs semantic consistent unsupervised point cloud segmentation gaussian splatting unsupervised point cloud segmentation critical embodied artificial intelligence autonomous driving mitigates prohibitive cost dense point level annotations required fully supervised methods integrating pre trained models segment model sam supplement semantic information natural choice approach faces fundamental mismatch discrete points continuous images mismatch leads inevitable projection overlap complex modality alignment resulting compromised semantic consistency transfer address limitations paper proposes pointgs simple effective pipeline unsupervised point cloud segmentation pointgs leverages gaussian splatting unified intermediate representation bridge discrete continuous domain gap input sparse point clouds reconstructed dense gaussian spaces multi view observations filling spatial gaps encoding occlusion relationships eliminate projection induced semantic conflation multi view dense images rendered gaussian space semantic masks extracted sam semantics distilled gaussian primitives contrastive learning ensure consistent semantic assignments different views gaussian space aligned original point cloud step registration point semantics assigned nearest neighbor search labeled gaussians experiments demonstrate pointgs outperforms state art unsupervised methods achieving miou scannet miou dis",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "From Assistance to Agency: Rethinking Autonomy and Control in CI/CD Pipelines",
@@ -1283,7 +1313,7 @@
     "text": "llm driven design space exploration fpga based accelerators designing field programmable gate array fpga based accelerators modern artificial intelligence workloads requires navigating large complex hardware design space encompassing architectural parameters dataflow strategies memory hierarchies making process time consuming resource intensive secda methodology enables rapid hardware software design accelerators systemc simulation fpga execution identifying optimal accelerator configurations requires substantial manual effort domain expertise work presents secda dse framework integrates large language models llms secda ecosystem comprising tools built secda automate design space exploration dse fpga based accelerators secda dse combines structured dse explorer generating accelerator configurations llm stack performs reasoning guided exploration using retrieval augmented generation chain thought prompting alongside feedback loop enables reinforced fine tuning continuous improvement demonstrate feasibility secda dse initial high level synthesis based evaluation generated accelerator design meets synthesis timing resource constraints zynq fpga",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 1
+    "cluster": 0
   },
   {
     "title": "Local Truncation Error-Guided Neural ODEs for Large Scale Traffic Forecasting",
@@ -1306,7 +1336,7 @@
     "text": "local truncation error guided neural odes large scale traffic forecasting spatiotemporal forecasting physical systems large scale traffic networks requires modeling dual dynamic continuous macroscopic rhythms discrete unpredictable microscopic shocks neural ordinary differential equations odes excel capturing smooth evolution inherent lipschitz continuity constraints inevitably cause severe smoothing confronting abrupt anomalies recent physics informed methods attempt bypass penalizing numerical integration errors enforce manifold smoothness mathematically reveal rigid regularization inherently triggers gradient conflicts attention collapse stripping model sensitivity anomalies resolve continuity shock dilemma propose local truncation error guided neural odes lte ode treating numerical error nuisance eliminated innovatively repurpose local truncation error lte unsupervised forward inductive bias mapping lte dynamic spatial attention mask architecture gracefully preserves high precision continuous ode evolution stable regions adaptively triggering discrete compensation branch exclusively shock points trained purely end end manifold penalties lte ode achieves state art performance multiple large scale benchmarks exhibiting exceptional robustness highly non linear fluctuations furthermore ablation integration steps demonstrates high deployment flexibility allowing model seamlessly adapt varying hardware memory constraints real world applications",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 0
+    "cluster": 3
   },
   {
     "title": "Reinforcement Learning for Dynamic Workflow Optimization in CI/CD Pipelines",
@@ -1348,7 +1378,7 @@
     "text": "comparative analysis driven security approaches devsecops challenges solutions future directions integration security devops known devsecops gained traction modern software development address security vulnerabilities maintaining agility artificial intelligence machine learning increasingly leveraged enhance security automation threat detection compliance enforcement existing studies primarily focus individual aspects driven security devsecops lacking structured comparison methodologies study conducts systematic literature review slr analyze compare driven security solutions devsecops evaluating technical capabilities implementation challenges operational impacts findings reveal gaps empirical validation scalability integration security automation study highlights best practices identifies research gaps proposes future directions optimizing based security frameworks devsecops",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "LADs: Leveraging LLMs for AI-Driven DevOps",
@@ -1377,7 +1407,7 @@
     "text": "lads leveraging llms driven devops automating cloud configuration deployment remains critical challenge evolving infrastructures heterogeneous hardware fluctuating workloads existing solutions lack adaptability require extensive manual tuning leading inefficiencies misconfigurations introduce lads llm driven framework designed tackle challenges ensuring robustness adaptability efficiency automated cloud management instead merely applying existing techniques lads provides principled approach configuration optimization depth analysis optimization works conditions leveraging retrieval augmented generation shot learning chain thought feedback based prompt chaining lads generates accurate configurations learns deployment failures iteratively refine settings findings reveal key insights trade offs performance cost scalability helping practitioners determine right strategies different deployment scenarios instance demonstrate prompt chaining based adaptive feedback loops enhance fault tolerance multi tenant environments structured log analysis example shots improves configuration accuracy extensive evaluations lads reduces manual effort optimizes resource utilization improves reliability open sourcing lads aim drive innovation powered devops automation",
     "label": "devops_automation",
     "predicted_label": "devops_automation",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "ML DevOps Adoption in Practice: A Mixed-Method Study of Implementation Patterns and Organizational Benefits",
@@ -1395,7 +1425,7 @@
     "text": "devops adoption practice mixed method study implementation patterns organizational benefits machine learning devops known mlops emerged critical framework efficiently operationalizing models various industries study investigates adoption trends implementation efforts benefits devops combination literature review empirical analysis surveying professionals industries conducting depth interviews practitioners study provides insights growing adoption devops particularly sectors like finance healthcare research identifies key challenges fragmented tooling data management complexities skill gaps hinder widespread adoption findings highlight significant benefits including improved deployment frequency reduced error rates enhanced collaboration data science devops teams lower operational costs organizations leveraging devops report accelerated model deployment increased scalability better compliance industry regulations study explores technical cultural efforts required successful implementation investments automation tools real time monitoring upskilling initiatives results indicate challenges remain devops presents viable path optimizing lifecycle management ensuring model reliability enhancing business value future research focus standardizing devops practices assessing return investment industries developing frameworks seamless integration traditional devops methodologies",
     "label": "devops_automation",
     "predicted_label": "devops_automation",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "AI for DevSecOps: A Landscape and Future Opportunities",
@@ -1415,7 +1445,7 @@
     "text": "devsecops landscape future opportunities devops emerged rapidly evolving software development paradigms growing concerns surrounding security software systems devsecops paradigm gained prominence urging practitioners incorporate security practices seamlessly devops workflow integrating security devops workflow impact agility impede delivery speed recently advancement artificial intelligence revolutionized automation various software domains including software security driven security approaches particularly leveraging machine learning deep learning hold promise automating security workflows reduce manual efforts integrated devops ensure uninterrupted delivery speed align devsecops paradigm simultaneously paper seeks contribute critical intersection devsecops presenting comprehensive landscape driven security techniques applicable devops identifying avenues enhancing security trust efficiency software development processes analyzed research papers spanning specifically address key research questions rqs identified security tasks associated devsecops process reviewed existing driven security approaches problems addressed benchmarks used evaluate approaches drawing insights findings discussed state art driven security approaches highlighted challenges existing research proposed corresponding avenues future opportunities",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "AI-augmented Automation for Real Driving Prediction: an Industrial Use Case",
@@ -1437,7 +1467,7 @@
     "text": "augmented automation real driving prediction industrial use case risen complexity automotive systems requires new development strategies methods master upcoming challenges traditional methods need changed increased level automation faster continuous improvement cycle context current vehicle performance tests represent time consuming expensive task need perform tests real driving conditions consequence agile iterative processes like devops largely hindered necessity triggering frequent tests paper reports practical experience developing augmented solution based machine learning model based engineering support continuous vehicle development testing particular historical data collected real driving conditions leveraged synthesize high fidelity driving simulator enable performance tests virtual environments based practical experience paper proposes conceptual framework support predictions based real driving behavior",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 3
   },
   {
     "title": "Challenges and Experiences of Iranian Developers with MLOps at Enterprise",
@@ -1454,8 +1484,8 @@
     ],
     "text": "challenges experiences iranian developers mlops enterprise data complex approaches designed process enterprises access data struggle glean potential insights research explores challenges experiences iranian developers implementing mlops paradigm enterprise settings mlops machine learning operations discipline focused automating continuous delivery machine learning models study review popular mlops tools used leading technology enterprises additionally present results questionnaire answered iranian machine learning experts software developers shedding light mlops tools primary obstacles faced findings reveal data quality problems lack resources difficulties model deployment primary challenges faced practitioners collaboration devops ops science teams seen pivotal challenge implementing mlops effectively",
     "label": "devops_automation",
-    "predicted_label": "devops_automation",
-    "cluster": 2
+    "predicted_label": "other",
+    "cluster": 4
   },
   {
     "title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
@@ -1494,7 +1524,7 @@
     "text": "challenges barriers using low code software machine learning big data grows ubiquitous domains stakeholders seek develop machine learning applications data success application usually depends close collaboration experts domain experts shortage engineers remains fundamental problem low code machine learning tools platforms aka automl aim democratize development domain experts automating repetitive tasks pipeline research presents empirical study posts questions accepted answers stack overflow contained automl related discussions examine topics spread various machine learning life cycle mllc phases popularity difficulty study offers interesting findings automl topics group categories mlops topic category questions largest followed model questions data questions documentation questions second questions asked model training implementation phase data preparation mllc phase automl practitioners mlops topic category challenging especially topics related model deployment monitoring automated pipeline findings implications automl stakeholders automl researchers automl service vendors automl developers academia industry collaboration improve different aspects automl better devops deployment support tutorial based documentation",
     "label": "devops_automation",
     "predicted_label": "devops_automation",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "Test Automation with Grad-CAM Heatmaps -- A Future Pipe Segment in MLOps for Vision AI?",
@@ -1517,7 +1547,7 @@
     "text": "test automation grad cam heatmaps future pipe segment mlops vision machine learning fundamental modern perception systems decade performance computer vision using trained deep neural networks outperformed previous approaches based careful feature engineering opaqueness large models substantial impediment critical applications automotive context remedy gradient weighted class activation mapping grad cam proposed provide visual explanations model internals paper demonstrate grad cam heatmaps used increase explainability image recognition model trained pedestrian underpass argue heatmaps support compliance seven key requirements trustworthy finally propose adding automated heatmap analysis pipe segment mlops pipeline believe building block used automatically detect trained model activated based invalid pixels test images suggesting biased models",
     "label": "devops_automation",
     "predicted_label": "devops_automation",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "The Collective Knowledge project: making ML models more portable and reproducible with open APIs, reusable best practices and MLOps",
@@ -1536,7 +1566,7 @@
     "text": "collective knowledge project making models portable reproducible open apis reusable best practices mlops article provides overview collective knowledge technology cknowledge attempts make easier reproduce systems research deploy models production adapt continuously changing data sets models research techniques software hardware concept decompose complex systems hoc research projects reusable sub components unified apis cli json meta description components connected portable workflows using devops principles combined reusable automation actions software detection plugins meta packages exposed optimization parameters workflows automatically plug different models data tools different vendors building running benchmarking research code unified way diverse platforms environments workflows help perform optimization reproduce results compare using public private scoreboards platform https cknowledge example modular approach successfully validated industrial partners automatically design optimize software hardware machine learning models reproducible efficient object detection terms speed accuracy energy size characteristics long term goal simplify accelerate development deployment models systems helping researchers practitioners share reuse knowledge experience best practices artifacts techniques using open apis",
     "label": "devops_automation",
     "predicted_label": "devops_automation",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "Log-based software monitoring: a systematic mapping study",
@@ -1555,7 +1585,7 @@
     "text": "log based software monitoring systematic mapping study modern software development operations rely monitoring understand systems behave production data provided application logs runtime environment essential detect diagnose undesired behavior improve reliability despite rich ecosystem industry ready log solutions monitoring complex systems getting insights log data remains challenge researchers practitioners actively working address challenges related logs effectively provide better tooling support logging decisions developers effectively process store log data extract insights log data holistic view research effort logging practices automated log analysis key provide directions disseminate state art technology transfer paper study papers research track papers journals industry track papers different communities machine learning software engineering systems structure research field light life cycle log data analysis shows logging challenging open source projects industry machine learning promising approach enable contextual analysis source code log recommendation investigation required assess usability tools practice studies approached efficient persistence log data open opportunities analyze application logs evaluate state art log analysis techniques devops context",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   },
   {
     "title": "DeCaf: Diagnosing and Triaging Performance Issues in Large-Scale Cloud Services",
@@ -1602,6 +1632,6 @@
     "text": "dogfooding use ibm cloud services monitor ibm cloud infrastructure stability performance cloud platforms essential directly impact customers satisfaction cloud service providers use cloud monitoring tools ensure rendered services match quality service requirements indicated established contracts service level agreements given enormous number resources need monitored highly scalable capable monitoring tools designed implemented cloud service providers amazon google ibm microsoft cloud monitoring tools monitor millions virtual physical resources continuously generate logs considering logs magnify technical issue used disaster detection prevention recovery logs useless assessed analyzed promptly argue scale cloud generated logs makes impossible devops teams analyze effectively implies needs automate process monitoring analysis using machine learning artificial intelligence automation witness anomaly logs alert devops staff automatic anomaly detectors require reliable scalable platform gathering filtering transforming logs executing detector models sending alerts devops staff work report implementing prototype platform based layered architecture pattern leverages micro service principles distribute tasks highly scalable resources efficient modules modules interact instance publish subscribe architectural pattern platform deployed ibm cloud service infrastructure used detect anomalies logs emitted ibm cloud services dogfooding",
     "label": "other",
     "predicted_label": "other",
-    "cluster": 2
+    "cluster": 4
   }
 ]

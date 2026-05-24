@@ -2,34 +2,59 @@ import re
 import json
 import logging
 import os
-import sys
-import token
+
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
 
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from config import RAW_DIR, PROCESSED_DIR
 
 logger = logging.getLogger(__name__)
 
-STOP_WORDS = ENGLISH_STOP_WORDS
 
-def lemmatize(token: str) -> str:
-    if len(token) <= 3:
-        return token
-    if token.endswith("tion"):
-        return token[:-4]
-    if token.endswith("ing") and len(token) > 6:
-        return token[:-3]
-    if token.endswith("ed") and len(token) > 5:
-        return token[:-2]
-    if token.endswith("ness"):
-        return token[:-4]
-    if token.endswith("ment"):
-        return token[:-4]
-    return token
+
+def get_nltk_resources():
+    resources = {
+        "tokenizers/punkt": "punkt",
+        "tokenizers/punkt_tab": "punkt_tab",
+        "taggers/averaged_perceptron_tagger": "averaged_perceptron_tagger",
+        "taggers/averaged_perceptron_tagger_eng": "averaged_perceptron_tagger_eng",
+        "corpora/wordnet": "wordnet",
+        "corpora/omw-1.4": "omw-1.4",
+    }
+    for path, name in resources.items():
+        try: nltk.data.find(path)
+        except LookupError:
+            logger.info(f"[Cleaner] Скачиваю NLTK ресурс: {name}")
+            nltk.download(name, quiet=True)
+
+get_nltk_resources()
+
+LEMMATIZER = WordNetLemmatizer()
+STOP_WORDS = ENGLISH_STOP_WORDS
 
 RE_LATEX   = re.compile(r"\$[^$]*\$|\\\w+\{[^}]*\}")  # LaTeX-формулы
 RE_SPECIAL = re.compile(r"[^a-z0-9\s]")                  # Не-буквы и не-пробелы
 RE_SPACES  = re.compile(r"\s+")                         # Лишние пробелы
+
+def get_wordnet_pos(treebank_tag: str) ->str:
+    match treebank_tag[:1]:
+        case "J":
+            return wordnet.ADJ
+        case "V":
+            return wordnet.VERB
+        case "R":
+            return wordnet.ADV
+        case _:
+            return wordnet.NOUN
+
+def lemmatize_tokens(tokens: list[str]) -> list[str]:
+    tagged = nltk.pos_tag(tokens)
+    return [
+        LEMMATIZER.lemmatize(token, pos=get_wordnet_pos(tag))
+        for token, tag in tagged
+    ]
 
 def clean_text(text: str) -> str:
     if not text:
@@ -48,7 +73,10 @@ def clean_text(text: str) -> str:
         for token in text.split()
         if token not in STOP_WORDS and len(token) > 2
     ]
+    if not tokens:
+        return ""
 
+    tokens = lemmatize_tokens(tokens)
     return " ".join(tokens)
 
 def merge_and_clean(articles: list[dict]) -> list[dict]:

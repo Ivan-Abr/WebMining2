@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="правки">
-      <change afterPath="$PROJECT_DIR$/collect/arxiv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/articles_cleaned.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/articles_labeled.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/labels.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/arxiv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/semantic_scholar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/articles_final.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/cluster_top_words.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/clusters_tsne.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/clusters_tsne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/elbow_curve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/gb_classifier.joblib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/label_encoder.joblib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/models_comparison.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/results/nb_classifier.joblib" afterDir="false" />
+    <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="правки arxiv + данные">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect/arxiv_client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect/arxiv_client2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/articles_cleaned.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/articles_cleaned.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/articles_labeled.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/articles_labeled.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw/arxiv.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/arxiv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/articles_final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/articles_final.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/cluster_top_words.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/cluster_top_words.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/clusters_tsne.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/clusters_tsne.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/clusters_tsne.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/clusters_tsne.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/elbow_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/elbow_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/gb_classifier.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/gb_classifier.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/models_comparison.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/models_comparison.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/results/nb_classifier.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/nb_classifier.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess/cleaner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +82,8 @@
       <recent name="C:\Users\ivabr\PycharmProjects\PythonProject1\cluster" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="arxiv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.cleaner">
+    <configuration name="cleaner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,12 +92,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/collect" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/preprocess" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Users\ivabr\PycharmProjects\PythonProject1\collect\arxiv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess/cleaner.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -206,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cleaner" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.arxiv_client2" />
         <item itemvalue="Python.report" />
         <item itemvalue="Python.gradient_boosting" />
         <item itemvalue="Python.visualizer" />
@@ -301,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778850132852</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="правки arxiv + данные">
+      <option name="closed" value="true" />
+      <created>1779402357585</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1779402357585</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +311,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -325,6 +339,7 @@
     <MESSAGE value="kmeans clusterization" />
     <MESSAGE value="kmeans clusterization (main)" />
     <MESSAGE value="правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки" />
+    <MESSAGE value="правки arxiv + данные" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки arxiv + данные" />
   </component>
 </project>
