@@ -8,7 +8,6 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.cluster import KMeans
-from sklearn.decomposition import TruncatedSVD
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from config import (
@@ -18,13 +17,10 @@ from config import (
 
 logger = logging.getLogger(__name__)
 
-
 def elbow_method(X, k_range=KMEANS_K_RANGE) -> int:
     inertials = []
     k_values = list(k_range)
-
     logger.info(f"[KMeans] Метод Elbow: проверяем k = {k_values}")
-
     for k in k_values:
         km = KMeans(n_clusters = k, random_state = 42, n_init = 10)
         km.fit(X)
@@ -33,7 +29,6 @@ def elbow_method(X, k_range=KMEANS_K_RANGE) -> int:
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     fig, ax = plt.subplots(figsize = (8, 5))
-
     ax.plot(k_values, inertials, "bo-", linewidth = 2, markersize = 7)
     ax.set_xlabel("Количество кластеров (k)", fontsize=12)
     ax.set_ylabel("Инерция (SSE)", fontsize=12)
@@ -44,25 +39,15 @@ def elbow_method(X, k_range=KMEANS_K_RANGE) -> int:
     fig.savefig(elbow_path, dpi=150)
     plt.close(fig)
     logger.info(f"[KMeans] Elbow-кривая сохранена → {elbow_path}")
-
     coords = np.column_stack([k_values, inertials])
-    # Вектор от первой до последней точки
     d = coords[-1] - coords[0]
     d = d/np.linalg.norm(d)
-    # Перпендикулярные расстояния каждой точки от прямой
     vecs = coords - coords[0]
     perp_dists = np.abs(np.cross(vecs, d))
     optimal_k = k_values[int(np.argmax(perp_dists))]
-
     logger.info(f"[KMeans] Оптимальное k (автовыбор): {optimal_k}")
     return optimal_k
 
-"""
-    Запускает K-means с заданным k.
-
-    Возвращает:
-        (cluster_labels, km_model)
-    """
 def run_kmeans(X, k: int = KMEANS_K_DEFAULT) -> tuple:
     logger.info(f"[KMeans] Кластеризация: k={k}")
     km = KMeans(n_clusters = k, random_state = 42, n_init = 15, max_iter = 500)
@@ -70,10 +55,6 @@ def run_kmeans(X, k: int = KMEANS_K_DEFAULT) -> tuple:
     logger.info(f"[KMeans] Готово. Инерция: {km.inertia_:.1f}")
     return cluster_labels.tolist(), km
 
-"""
-    Извлекает топ-n ключевых слов для каждого кластера
-    по близости центроида к признакам.
-    """
 def get_top_words_per_cluster(
         km,
         feature_names: list[str],
@@ -85,7 +66,6 @@ def get_top_words_per_cluster(
         top_words[cluster_id] = [feature_names[i] for i in indices]
     return top_words
 
-"""Добавляет поле `cluster` к каждой статье."""
 def add_clusters_to_articles(
         articles: list[dict],
         cluster_labels: list[int],
@@ -95,7 +75,6 @@ def add_clusters_to_articles(
     return articles
 
 def save_top_words(top_words: dict[int, list[str]]) -> str:
-    """Сохраняет топ-слова кластеров в JSON."""
     path = os.path.join(RESULTS_DIR, "cluster_top_words.json")
     os.makedirs(RESULTS_DIR, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -105,20 +84,11 @@ def save_top_words(top_words: dict[int, list[str]]) -> str:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-
     from preprocess.vectorizer import load_artifacts
-
     X, labels, vectorizer, feature_names = load_artifacts()
-
-    # Elbow для выбора k
     optimal_k = elbow_method(X)
-
-    # Кластеризация
     cluster_labels, km = run_kmeans(X, k=optimal_k)
-
-    # Топ-слова
     top_words = get_top_words_per_cluster(km, feature_names)
-
     print(f"\nКластеры (k={optimal_k}):")
     for cid, words in top_words.items():
         print(f"  Кластер {cid}: {', '.join(words)}")

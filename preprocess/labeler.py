@@ -41,10 +41,6 @@ def filter_rare_labels(
     articles: list[dict],
     min_count: int = MIN_LABEL_COUNT,
 ) -> list[dict]:
-    """
-    Удаляет статьи с метками, которые встречаются реже min_count раз.
-    Это нужно для корректного обучения классификатора (stratified split).
-    """
     counter = Counter(art["label"] for art in articles)
     valid_labels = {lbl for lbl, cnt in counter.items() if cnt >= min_count}
 

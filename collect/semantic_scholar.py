@@ -29,7 +29,7 @@ def fetch_semantic_articles(
         offset = 0
         fetched = 0
         while fetched < max_per_query:
-            limit = min(100, max_per_query - fetched)  # API допускает max 100 за раз
+            limit = min(100, max_per_query - fetched)
             params = {
                 "query": query,
                 "fields": FIELDS,
@@ -57,13 +57,11 @@ def fetch_semantic_articles(
 
             papers = data.get("data", [])
             if not papers:
-                break  # Больше результатов нет
+                break
 
             new_count = 0
             for paper in papers:
                 paper_id = paper.get("paper_id")
-
-                # Пропускаем дубликаты
                 if paper_id in seen_ids or not paper_id:
                     continue
                 seen_ids.add(paper_id)

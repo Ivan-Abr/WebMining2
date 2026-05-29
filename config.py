@@ -16,16 +16,16 @@ SEARCH_QUERIES = [
     "DevOps automation machine learning"
 ]
 
-ARXIV_MAX_PER_QUERY = 20 # максимум статей на запрос arXiv
-SEMANTIC_MAX_PER_QUERY = 100 # максимум статей на запрос Semantic Scholar
-REQUEST_DELAY_SEC = 1.5 # задержка между запросами (rate limiting)
+ARXIV_MAX_PER_QUERY = 20
+SEMANTIC_MAX_PER_QUERY = 100
+REQUEST_DELAY_SEC = 1.5
 
 # Препроцессинг
 TFIDF_MAX_FEATURES = 5000
 TFIDF_NGRAM_RANGE = (1, 2)
 TFIDF_MIN_DF = 2
 
-# Авто-разметка
+# Авторазметка
 LABEL_KEYWORDS = {
     "llm_agents": [
         "llm agent", "language model agent", "autonomous agent",
@@ -72,10 +72,10 @@ GB_PARAMS = {
 # Параметры Naive Bayes
 NB_ALPHA = 0.1
 
-KMEANS_K_RANGE = range(2, 11) # диапазон k для метода Elbow
-KMEANS_K_DEFAULT = 5 # k по умолчанию
+KMEANS_K_RANGE = range(2, 11)
+KMEANS_K_DEFAULT = 5
 TSNE_PERPLEXITY = 30
-SVD_COMPONENTS = 50 # TruncatedSVD перед t-SNE
+SVD_COMPONENTS = 50
 
 # Названия кластеров
 CLUSTER_NAMES = {

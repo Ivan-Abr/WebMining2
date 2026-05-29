@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bf2589e-d395-4211-8e92-7440c5d12c21" name="Changes" comment="правки arxiv + данные">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/articles_cleaned.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/articles_cleaned.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/articles_labeled.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/articles_labeled.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/labels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/tfidf_matrix.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/tfidf_vectorizer.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/raw/arxiv.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/arxiv.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/articles_final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/articles_final.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/cluster_top_words.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/cluster_top_words.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/clusters_tsne.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/clusters_tsne.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/clusters_tsne.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/clusters_tsne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/confusion_matrix_gradientboosting.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/confusion_matrix_naivebayes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/elbow_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/elbow_curve.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/gb_classifier.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/gb_classifier.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/models_comparison.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/models_comparison.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/results/nb_classifier.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/data/results/nb_classifier.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cluster/kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/kmeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cluster/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/visualizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/arxiv.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/arxiv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect/semantic_scholar.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect/semantic_scholar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocess/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess/cleaner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess/labeler.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess/labeler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess/vectorizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess/vectorizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

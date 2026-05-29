@@ -12,8 +12,6 @@ from config import RAW_DIR, PROCESSED_DIR
 
 logger = logging.getLogger(__name__)
 
-
-
 def get_nltk_resources():
     resources = {
         "tokenizers/punkt": "punkt",
@@ -62,10 +60,7 @@ def clean_text(text: str) -> str:
 
     text = text.lower()
     text = RE_LATEX.sub(" ", text)
-
-    # важно: заменяем на пробел
     text = re.sub(r"[^a-z\s]", " ", text)
-
     text = re.sub(r"\s+", " ", text).strip()
 
     tokens = [
@@ -130,7 +125,6 @@ def load_and_clear_all() -> list[dict]:
     all_articles = merge_and_clean(all_articles)
     return all_articles
 
-
 def save_cleaned(articles: list[dict], path: str | None = None) -> str:
     if path is None:
         path = os.path.join(PROCESSED_DIR, "articles_cleaned.json")
@@ -141,7 +135,6 @@ def save_cleaned(articles: list[dict], path: str | None = None) -> str:
 
     logger.info(f"[Cleaner] Сохранено {len(articles)} статей → {path}")
     return path
-
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")

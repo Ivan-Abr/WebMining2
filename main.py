@@ -133,51 +133,34 @@ def step_cluster():
     labeled_path = os.path.join(PROCESSED_DIR, "articles_labeled.json")
     with open(labeled_path, encoding="utf-8") as f:
         articles = json.load(f)
-
-    # Метод Elbow
     optimal_k = elbow_method(X)
     logger.info(f"Оптимальное k = {optimal_k}")
-
-    # K-means
     cluster_labels, km = run_kmeans(X, k=optimal_k)
-
-    # Топ-слова кластеров
     top_words = get_top_words_per_cluster(km, feature_names)
     save_top_words(top_words)
-
-    # Добавляем кластеры к статьям
     articles = add_clusters_to_articles(articles, cluster_labels)
     with open(labeled_path, "w", encoding="utf-8") as f:
         json.dump(articles, f, ensure_ascii=False, indent=2)
-
-    # Визуализация
     logger.info("Построение t-SNE визуализации...")
     titles = [art.get("title", "") for art in articles]
     X_2d   = reduce_dimensions(X)
     plot_static(X_2d, cluster_labels, titles, optimal_k)
     plot_interactive(X_2d, cluster_labels, titles, labels, optimal_k)
-
     logger.info(f"Кластеризация завершена за {time.time() - t0:.1f}с")
     return top_words
-
 
 def step_report(metrics_list=None):
     logger.info("=" * 60)
     logger.info("ШАГ 5: ИТОГОВЫЙ ОТЧЁТ")
     logger.info("=" * 60)
-
     labeled_path = os.path.join(PROCESSED_DIR, "articles_labeled.json")
     if not os.path.exists(labeled_path):
         logger.error(f"Файл не найден: {labeled_path}")
         return
-
     with open(labeled_path, encoding="utf-8") as f:
         articles = json.load(f)
-
     gb_predictions = [art.get("predicted_label") for art in articles]
     build_final_csv(articles, gb_predictions)
-
-    # Загружаем топ-слова если есть
     top_words = None
     tw_path = os.path.join(RESULTS_DIR, "cluster_top_words.json")
     if os.path.exists(tw_path):

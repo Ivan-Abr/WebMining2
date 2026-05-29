@@ -11,10 +11,9 @@ from config import RESULTS_DIR, PROCESSED_DIR
 
 logger = logging.getLogger(__name__)
 
-def _format_authors(authors) -> str:
+def format_authors(authors) -> str:
     if isinstance(authors, list):
         return "; ".join(authors)
-    # Уже строка — возвращаем как есть
     return str(authors)
 
 def build_final_csv(
@@ -25,7 +24,7 @@ def build_final_csv(
     for i, art in enumerate(articles):
         rows.append({
             "title": art.get("title", "")[:200],
-            "authors": _format_authors(art.get("authors", [])),
+            "authors": format_authors(art.get("authors", [])),
             "year": art.get("year"),
             "url": art.get("url", ""),
             "source": art.get("source", ""),
@@ -83,7 +82,6 @@ def print_summary(
         for cid, count in sorted(cluster_counter.items()):
             print(f"  Кластер {cid:<3}              : {count:>4} статей")
 
-        # Топ-слова кластеров
         if top_words:
             print()
             for cid, words in sorted(top_words.items(), key=lambda x: int(x[0])):

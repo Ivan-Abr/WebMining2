@@ -16,22 +16,13 @@ logger = logging.getLogger(__name__)
 
 
 def reduce_dimensions(X) -> np.ndarray:
-    """
-    Двухэтапное снижение размерности:
-    1. TruncatedSVD: sparse TF-IDF (5000 признаков) → 50 компонент
-    2. t-SNE: 50 компонент → 2D
-
-    TruncatedSVD необходим перед t-SNE для ускорения работы.
-    """
     n_components = min(SVD_COMPONENTS, X.shape[1] - 1, X.shape[0] - 1)
     perplexity   = min(TSNE_PERPLEXITY, X.shape[0] - 1)
-
     logger.info(f"[Visualizer] TruncatedSVD: {X.shape[1]} → {n_components}")
     svd = TruncatedSVD(n_components=n_components, random_state=42)
     X_svd = svd.fit_transform(X)
     explained = svd.explained_variance_ratio_.sum()
     logger.info(f"[Visualizer] SVD объясняет {explained:.1%} дисперсии")
-
     logger.info(f"[Visualizer] t-SNE: {n_components} → 2D (perplexity={perplexity})")
     tsne = TSNE(
         n_components=2,
@@ -45,14 +36,12 @@ def reduce_dimensions(X) -> np.ndarray:
     logger.info("[Visualizer] t-SNE завершён")
     return X_2d
 
-
 def plot_static(
     X_2d: np.ndarray,
     cluster_labels: list[int],
     titles: list[str],
     k: int,
 ) -> str:
-    """Строит статический scatter plot (PNG)."""
     os.makedirs(RESULTS_DIR, exist_ok=True)
 
     colors = plt.cm.get_cmap("tab10", k)
@@ -86,7 +75,6 @@ def plot_interactive(
     labels: list[str],
     k: int,
 ) -> str:
-    """Строит интерактивный scatter plot через Plotly (HTML)."""
     try:
         import plotly.graph_objects as go
         import plotly.express as px
@@ -126,23 +114,17 @@ def plot_interactive(
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-
     from preprocess.vectorizer import load_artifacts
     import json as _json
-
     X, labels, _, _ = load_artifacts()
-
-    # Загружаем кластерные метки (если уже есть)
     labeled_path = os.path.join(
         os.path.dirname(__file__), "..", "data", "processed", "articles_labeled.json"
     )
     with open(labeled_path, encoding="utf-8") as f:
         articles = _json.load(f)
-
     cluster_labels = [art.get("cluster", 0) for art in articles]
     titles         = [art.get("title",   "") for art in articles]
     k = max(cluster_labels) + 1
-
     X_2d = reduce_dimensions(X)
     plot_static(X_2d, cluster_labels, titles, k)
     plot_interactive(X_2d, cluster_labels, titles, labels, k)
